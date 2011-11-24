@@ -15,10 +15,11 @@
 	};
 	
 	this.fillInEmpties = function() {
-		e = jQuery.Event("keypress");
+		e = jQuery.Event( "keypress" );
 		e.which = 13;
 		
 		$( '.editempty' ).val( this.getName() ).trigger( e );
+		this.count++;
 	}
 	
 	this.doLoop = function() {
